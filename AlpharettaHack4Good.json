@@ -1,0 +1,304 @@
+{
+  "luis_schema_version": "2.1.0",
+  "versionId": "0.1",
+  "name": "AlpharettaHack4Good",
+  "desc": "Awesome hackers",
+  "culture": "en-us",
+  "intents": [
+    {
+      "name": "Child Care"
+    },
+    {
+      "name": "Health Care"
+    },
+    {
+      "name": "Help"
+    },
+    {
+      "name": "None"
+    }
+  ],
+  "entities": [
+    {
+      "name": "childcare provider"
+    },
+    {
+      "name": "daycare"
+    },
+    {
+      "name": "Events.Address",
+      "inherits": {
+        "domain_name": "Events",
+        "model_name": "Address"
+      }
+    },
+    {
+      "name": "medical provider"
+    }
+  ],
+  "composites": [],
+  "closedLists": [],
+  "bing_entities": [
+    "datetimeV2",
+    "geography"
+  ],
+  "actions": [],
+  "model_features": [
+    {
+      "name": "Daycare Provider",
+      "mode": true,
+      "words": "daycare,babysitter,nursery school,kindergarten,caregiver,governess,nanny,child - care worker,day - care provider,au pair,nursemaid,childcare,preschool,babysitting,baby sitter,nannies,child care,day care,babyminding,infant care,infant,infants,nursery",
+      "activated": true
+    },
+    {
+      "name": "Medical Providers",
+      "mode": true,
+      "words": "doctor,physician,md,medical practitioner,clinician,general practitioner,gp,medic,intern,doc,medico,family practice,general practice,obstetrics,obstetrician,gynecology,gynecologist,immunizations,dentist,hiv screening,std treatment,std screening,family planning,pediatrician,nurse,physician ' s assistant,nurse practitioner,registered nurse,RN,surgeon,specialist,healer,psychologist,social worker,psychiatrist,pediatrics,MD,physical therapist",
+      "activated": true
+    }
+  ],
+  "regex_features": [],
+  "utterances": [
+    {
+      "text": "i need help",
+      "intent": "Help",
+      "entities": []
+    },
+    {
+      "text": "help me",
+      "intent": "Help",
+      "entities": []
+    },
+    {
+      "text": "i need a doctor",
+      "intent": "Health Care",
+      "entities": [
+        {
+          "entity": "medical provider",
+          "startPos": 9,
+          "endPos": 14
+        }
+      ]
+    },
+    {
+      "text": "who is my closest doctor",
+      "intent": "Health Care",
+      "entities": [
+        {
+          "entity": "medical provider",
+          "startPos": 18,
+          "endPos": 23
+        }
+      ]
+    },
+    {
+      "text": "i need childcare",
+      "intent": "Child Care",
+      "entities": []
+    },
+    {
+      "text": "how can i see a doctor",
+      "intent": "Health Care",
+      "entities": [
+        {
+          "entity": "medical provider",
+          "startPos": 16,
+          "endPos": 21
+        }
+      ]
+    },
+    {
+      "text": "where can i get a doctor",
+      "intent": "Health Care",
+      "entities": [
+        {
+          "entity": "medical provider",
+          "startPos": 18,
+          "endPos": 23
+        }
+      ]
+    },
+    {
+      "text": "what is the location of the doctor",
+      "intent": "Health Care",
+      "entities": [
+        {
+          "entity": "medical provider",
+          "startPos": 28,
+          "endPos": 33
+        },
+        {
+          "entity": "Events.Address",
+          "startPos": 12,
+          "endPos": 19
+        }
+      ]
+    },
+    {
+      "text": "when can i see a doctor",
+      "intent": "Health Care",
+      "entities": [
+        {
+          "entity": "medical provider",
+          "startPos": 17,
+          "endPos": 22
+        }
+      ]
+    },
+    {
+      "text": "what time is the doctor available",
+      "intent": "Health Care",
+      "entities": [
+        {
+          "entity": "medical provider",
+          "startPos": 17,
+          "endPos": 22
+        }
+      ]
+    },
+    {
+      "text": "what time is the provider available",
+      "intent": "Child Care",
+      "entities": [
+        {
+          "entity": "daycare",
+          "startPos": 17,
+          "endPos": 24
+        },
+        {
+          "entity": "childcare provider",
+          "startPos": 17,
+          "endPos": 24
+        }
+      ]
+    },
+    {
+      "text": "how can i contact a provider",
+      "intent": "Child Care",
+      "entities": [
+        {
+          "entity": "daycare",
+          "startPos": 20,
+          "endPos": 27
+        },
+        {
+          "entity": "childcare provider",
+          "startPos": 20,
+          "endPos": 27
+        }
+      ]
+    },
+    {
+      "text": "where can i get a provider",
+      "intent": "Child Care",
+      "entities": [
+        {
+          "entity": "daycare",
+          "startPos": 18,
+          "endPos": 25
+        },
+        {
+          "entity": "childcare provider",
+          "startPos": 18,
+          "endPos": 25
+        }
+      ]
+    },
+    {
+      "text": "what is the address of the provider",
+      "intent": "Child Care",
+      "entities": [
+        {
+          "entity": "Events.Address",
+          "startPos": 12,
+          "endPos": 18
+        },
+        {
+          "entity": "daycare",
+          "startPos": 27,
+          "endPos": 34
+        },
+        {
+          "entity": "childcare provider",
+          "startPos": 27,
+          "endPos": 34
+        }
+      ]
+    },
+    {
+      "text": "when can i leave my kids at provider",
+      "intent": "Child Care",
+      "entities": [
+        {
+          "entity": "daycare",
+          "startPos": 28,
+          "endPos": 35
+        },
+        {
+          "entity": "childcare provider",
+          "startPos": 28,
+          "endPos": 35
+        }
+      ]
+    },
+    {
+      "text": "who is my closest provider",
+      "intent": "Child Care",
+      "entities": [
+        {
+          "entity": "daycare",
+          "startPos": 18,
+          "endPos": 25
+        },
+        {
+          "entity": "childcare provider",
+          "startPos": 18,
+          "endPos": 25
+        }
+      ]
+    },
+    {
+      "text": "child provider",
+      "intent": "Child Care",
+      "entities": [
+        {
+          "entity": "daycare",
+          "startPos": 6,
+          "endPos": 13
+        },
+        {
+          "entity": "childcare provider",
+          "startPos": 6,
+          "endPos": 13
+        }
+      ]
+    },
+    {
+      "text": "medical provider",
+      "intent": "Health Care",
+      "entities": [
+        {
+          "entity": "medical provider",
+          "startPos": 8,
+          "endPos": 15
+        }
+      ]
+    },
+    {
+      "text": "help i need someone",
+      "intent": "Help",
+      "entities": []
+    },
+    {
+      "text": "i need a provider",
+      "intent": "Child Care",
+      "entities": [
+        {
+          "entity": "childcare provider",
+          "startPos": 9,
+          "endPos": 16
+        }
+      ]
+    }
+  ]
+}
